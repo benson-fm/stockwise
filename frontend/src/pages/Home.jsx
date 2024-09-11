@@ -1,8 +1,16 @@
 import stocks from "../assets/stocks.jpg";
 import Typewriter from "typewriter-effect";
 import Transition from "../../lib/transition";
+import { useNavigate } from 'react-router-dom';
 
 export default function Home() {
+
+  const navigate = useNavigate();
+
+  const handleClick = () => {
+    navigate('/tracker'); // Replace with your route
+  };
+
   return (
     <>
       <div className="w-full min-h-dvh bg-black flex justify-center items-center">
@@ -41,8 +49,8 @@ export default function Home() {
                 </Transition>
                 <Transition transitionDuration={2}>
                   <div className="flex flex-row justify-start items-center gap-6">
-                    <button className="btn btn-outline btn-accent">App</button>
-                    <button className="btn btn-outline btn-accent">
+                    <button className="btn btn-outline btn-accent" onClick={handleClick}>App</button>
+                    <button className="btn btn-outline btn-accent" onClick={() => window.location.href = 'https://github.com/benson-fm/stockwise'}>
                       Github
                     </button>
                   </div>

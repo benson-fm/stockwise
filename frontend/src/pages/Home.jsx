@@ -13,7 +13,7 @@ export default function Home() {
 
   return (
     <>
-      <div className="w-full min-h-dvh bg-black flex justify-center items-center">
+      <div className="w-full min-h-dvh bg-[#111827] flex justify-center items-center">
         <Transition>
           <div className="py-20 px-36 flex flex-col gap-20 h-full">
             <p className="font-inter text-white tracking-wide font-bold text-lg basis-1/6">
@@ -63,6 +63,7 @@ export default function Home() {
           </div>
         </Transition>
       </div>
+      
     </>
   );
 }

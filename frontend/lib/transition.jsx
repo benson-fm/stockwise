@@ -5,7 +5,7 @@ const Transition = ({ children, transitionDuration }) => (
   <motion.div
     initial={{ opacity: 0 }}
     animate={{ opacity: 1 }}
-    transition={{ duration: 0.5, delay: transitionDuration || 1 }}
+    transition={{ duration: 0.5, delay: transitionDuration || 0.5 }}
   >
     {children}
   </motion.div>

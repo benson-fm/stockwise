@@ -1,6 +1,10 @@
 # StockWise
-### Stock sentiment analysis powered by Google Gemini
-<img alt="banner" src="stockwise">
+<div align="center">
+  <img alt="banner" src="https://github.com/benson-fm/stockwise/blob/main/frontend/logoTitle.png">
+
+  ### Stock sentiment analysis powered by Google Gemini
+</div>
+
 
 ## Built with:
 <div align="center">
@@ -20,21 +24,19 @@
 </div>
 
 ## Overview
-One half of American adults report spending 5 hours or fewer outside in nature each week, with steady decline in recent years. Yet, research shows that connection to nature is essential to quality of life, health, and social well-being. Given this problem, we were inspired to create TrailQuest.
+In today’s fast-paced stock market, investors are bombarded with vast amounts of news articles, social media posts, and financial reports related to various stocks. The challenge arises from the overwhelming volume of information, making it difficult for investors to assess the overall sentiment around a particular stock. Without a clear understanding of the sentiment (whether positive, negative, or neutral), investors may struggle to make informed decisions, potentially leading to missed opportunities or poor investments.
 
-TrailQuest is a multi-featured AI-powered hiking gamification plaform that brings the fun to outdoor activities such as hiking and picnicking. TrailQuest strives to bring more people outside to embrace the full force of nature by introducing motivational systems inspired by popular video games. TrailQuests' gamification systems include a badge system, quests, and hunting for collectibles. By introducing these types of features, we expect more people to be influenced to partake in outdoor activities.
+StockWise is an AI-powered tool designed to help investors make smarter decisions by analyzing the 50 most relevant news articles, reports, and social media posts related to a specific stock. With the overwhelming volume of information generated daily, it becomes nearly impossible for investors to stay on top of every relevant piece of news or understand the overall sentiment around a stock. StockWise simplifies this by leveraging advanced natural language processing (NLP) algorithms to filter, analyze, and interpret stock-related content through Google Gemini.
 
 ## Features
-### Starting an Adventure
-The user has a couple of ways to find a new hike: they can use our AI-suggestion search bar or use the saved and recent tabs to look at previous trails they looked at or liked.
+### Stock Sentiment Percentile Distribution
+The Stock Sentiment Percentile Distribution feature offers a detailed visualization of the current market sentiment towards a stock, breaking down the overall sentiment into three categories: positive, neutral, and negative. This feature aggregates data from the 50 most relevant articles or reports and presents the percentage of each sentiment type. Investors can easily interpret this breakdown to understand the general market consensus. For instance, if 70% of the coverage is positive, the stock may have favorable news, while a higher percentage of negative sentiment might suggest concerns. The visual distribution helps users grasp market trends at a glance.
 
-Once the user picks the trail they want, our geographic map automagically centers on the trail that the user wants to hike and maps out the trail’s route. The user then starts a new hike which begins collecting statistics on their adventure. Along their hike, they have the opportunity to collect items throughout the course and add to a collection of collectibles they have obtained over their hiking career. This gives the hiker an incentive to complete trails and explore new areas. Each collectible also offers fun trivia about the animals they represent, growing the user’s audience of the nature that surrounds them.
+### Action Recommendations
+The Action Recommendations feature provides clear investment guidance by analyzing sentiment and suggesting one of three actions: Buy, Sell, or Hold. Based on the sentiment analysis, market data, and performance indicators, the system offers a tailored recommendation to the investor. A recommendation to "Buy" may be triggered by a high positive sentiment and strong stock performance, while a "Sell" suggestion could result from significant negative news or financial instability. The "Hold" recommendation typically occurs when sentiment is mixed or neutral, advising users to wait before taking action. This feature simplifies decision-making by translating complex data into actionable steps.
 
-### Other Perks
-We have also provided an AI-powered suggestion copilot to help users plan their trips throughout their hiking career. Our copilot takes in what the user wants to do and lists other suggestions at their place of interest, tailored specifically to the user so they can experience unforgettable memories while on their trip.
-
-### Badges and XP
-Finally, our gamification system includes XP and levels which further motivates the user to participate in outdoor activities. Our XP system is based off the total amount of trails they complete and the total miles they walk. In addition, we have an integrated quest system that encourages the user to level up faster through partaking in daily challenges which grant additional XP. As your level gets higher, users begin to earn badges in a tiered approach starting from bronze to the ultimate tier of ruby. For true outdoors aficionados, we have incorporated a leaderboard system where top hikers are displayed for the world to see.
+### Stock Analysis
+The Stock Analysis feature offers a concise, narrative summary of the overall news coverage and sentiment surrounding a stock. It analyzes the key drivers behind the stock’s current sentiment and explains why the market is responding positively, negatively, or neutrally. The feature dives deeper into the specific factors influencing the stock, such as financial performance, market trends, industry news, or external events. It also provides reasoning behind the recommended action (buy, sell, or hold), giving investors a holistic view of the stock’s situation. By providing both data and context, the Stock Analysis feature equips users with the knowledge needed to make informed investment decisions.
 
 ## Application Demo
 https://github.com/anonymous-himalayas/TrailQuest/assets/108317527/a9243c0e-d076-482e-9efd-550f32bf0976

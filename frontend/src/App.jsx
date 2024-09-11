@@ -1,7 +1,14 @@
-export default function App() {
-  return (
-    <h1 className="text-3xl font-bold underline">
-      Hello stock!
-    </h1>
-  )
-}
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import Home from "./pages/Home";
+import Tracker from "./pages/Tracker";
+
+const App = () => (
+  <Router>
+    <Routes>
+      <Route path="/" element={<Home />} />
+      <Route path="/tracker" element={<Tracker />} />
+    </Routes>
+  </Router>
+);
+
+export default App;

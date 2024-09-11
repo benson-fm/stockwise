@@ -1,5 +1,5 @@
 # Installation
-This is the installation process to ensure that 
+This is the installation process to ensure a functional backend
 1. Ensure you have the following installed in your local machine
    - Python (3.12)
    - Conda/MiniConda

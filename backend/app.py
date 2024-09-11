@@ -43,7 +43,7 @@ def get_stock_data(ticker):
     # If Stock not present, create entry in FireBase, then read and return to Front-End.
     else:
         # Fetch stock-related articles
-        sample_size = 50
+        sample_size = 100
         articles = get_articles(ticker, sample_size, newsapi)
 
         # Generate response (description and sentiment)

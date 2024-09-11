@@ -1,8 +1,10 @@
-# React + Vite
+# Installation
+The is the installation process for a functional frontend
+1. Ensure you have the following installed in your local machine
+   - Node.js
+2. Go into your frontend directory by `cd frontend `
+3. Run `npm install`
+4. Based on the backend server you may need to change the link in `Tracker.jsx` for the axios fetch request.
+5. Run `npm run dev` 
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
-
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Following these steps will properly set up and run the frontend

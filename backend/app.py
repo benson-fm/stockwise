@@ -10,7 +10,7 @@ import google.generativeai as genai
 from dotenv import load_dotenv, dotenv_values
 from flask_cors import CORS
 import os
-from firebase_config import create_stock_analysis, read_stock_analysis, update_stock_analysis, delete_stock_analysis
+from firebase_config import create_stock_analysis, check_for_stock, read_stock_analysis, update_stock_analysis, delete_stock_analysis
 
 app = Flask(__name__)
 CORS(app)
@@ -30,41 +30,28 @@ model = genai.GenerativeModel("gemini-1.5-flash") # Change for the version to th
 def home():
     return jsonify({"message": "Hello, World!"})
 
-
 @app.route('/stocks/parse/<ticker>')
-def get_stock_info(ticker):
-    sample_size = 50
-    try:
+#@app.route('/stock/<string:ticker>', methods=['GET'])
+def get_stock_data(ticker):
+    
+    # Check to see if Stock is in FireBase First
+    if check_for_stock(ticker):
+    
+        # Read Data and return to Front-End
+        return read_stock_analysis(ticker)
+    
+    # If Stock not present, create entry in FireBase, then read and return to Front-End.
+    else:
         # Fetch stock-related articles
+        sample_size = 50
         articles = get_articles(ticker, sample_size, newsapi)
 
         # Generate response (description and sentiment)
         description, sentiment, action, positive, neutral, negative = generate_response(articles, ticker, sample_size, model)
         date = datetime.today().strftime('%Y-%m-%d')
 
+        # Create the entry in FireBase
         create_stock_analysis(ticker, description, sentiment, action, positive, neutral, negative, date)
 
-        # Structure and return the response as JSON
-        return jsonify({
-            "ticker": ticker,
-            "sentiment": sentiment,
-            "description": description,
-            "action": action,
-            "date": date, 
-            "positive": positive,
-            "neutral": neutral,
-            "negative": negative 
-        })
-
-    except Exception as e:
-        # Handle errors, return a meaningful message
-        return jsonify({"error": str(e)}), 500
-
-
-# @app.route('/stocks/<ticker>')
-# def get_stock(ticker):
-#     doc_ref = db.collection("stocks").document(ticker)
-#     doc = doc_ref.get()
-#     if doc.exists:
-#         return jsonify(doc.to_dict())
-#     return jsonify({"error": "Stock not found"})
+        # Read Data and return to Front-End
+        return read_stock_analysis(ticker)

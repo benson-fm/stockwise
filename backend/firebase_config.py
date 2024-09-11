@@ -1,5 +1,6 @@
 import firebase_admin
 from firebase_admin import credentials, firestore
+from flask import jsonify
 
 # Use the downloaded service account key JSON file
 cred = credentials.Certificate("./stockwise-6aef4-firebase-adminsdk-hbpo8-f3cfc11248.json")
@@ -33,12 +34,35 @@ def create_stock_analysis(ticker, description, sentiment, action, positive, neut
     print(f'Stock data for {ticker} stored in Firestore')
 
 # 'R'
-def read_stock_analysis(ticker):
+def check_for_stock(ticker):
     doc = db.collection('stocks').document(ticker).get()
     if doc.exists:
-        print(doc.to_dict())
+        return True
     else:
-        print('No such document!')
+        return False
+    
+def read_stock_analysis(ticker):
+    doc = db.collection('stocks').document(ticker).get()
+    data = doc.to_dict()
+    
+    sentiment = data.get('sentiment')
+    description = data.get('description')
+    action = data.get('action')
+    date = data.get('date')
+    positive = data.get('positive')
+    neutral = data.get('neutral')
+    negative = data.get('negative')
+
+    return jsonify({
+        "ticker": ticker,
+        "sentiment": sentiment,
+        "description": description,
+        "action": action,
+        "date": date, 
+        "positive": positive,
+        "neutral": neutral,
+        "negative": negative 
+    })
 
 # 'U'
 def update_stock_analysis(ticker, paramter, value):

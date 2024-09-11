@@ -10,8 +10,8 @@ firebase_admin.initialize_app(cred)
 # Access Firestore
 db = firestore.client()
 
-
-def store_stock_analysis(ticker, description, sentiment, action, positive, neutral, negative, date):
+# 'C'
+def create_stock_analysis(ticker, description, sentiment, action, positive, neutral, negative, date):
     # Extract data from the Gemini response
     
     # Create a Firestore document reference based on stock ticker
@@ -31,3 +31,21 @@ def store_stock_analysis(ticker, description, sentiment, action, positive, neutr
     # Set document data in Firestore
     doc_ref.set(data)
     print(f'Stock data for {ticker} stored in Firestore')
+
+# 'R'
+def read_stock_analysis(ticker):
+    doc = db.collection('stocks').document(ticker).get()
+    if doc.exists:
+        print(doc.to_dict())
+    else:
+        print('No such document!')
+
+# 'U'
+def update_stock_analysis(ticker, paramter, value):
+    db.collection('stocks').document(ticker).update({
+        paramter: value
+    })
+
+# 'D'
+def delete_stock_analysis(ticker):
+    db.collection('stocks').document(ticker).delete()

@@ -10,7 +10,7 @@ import google.generativeai as genai
 from dotenv import load_dotenv, dotenv_values
 from flask_cors import CORS
 import os
-from firebase_config import store_stock_analysis
+from firebase_config import create_stock_analysis, read_stock_analysis, update_stock_analysis, delete_stock_analysis
 
 app = Flask(__name__)
 CORS(app)
@@ -42,7 +42,7 @@ def get_stock_info(ticker):
         description, sentiment, action, positive, neutral, negative = generate_response(articles, ticker, sample_size, model)
         date = datetime.today().strftime('%Y-%m-%d')
 
-        store_stock_analysis(ticker, description, sentiment, action, positive, neutral, negative, date)
+        create_stock_analysis(ticker, description, sentiment, action, positive, neutral, negative, date)
 
         # Structure and return the response as JSON
         return jsonify({

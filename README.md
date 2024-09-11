@@ -42,6 +42,7 @@ The Stock Analysis feature offers a concise, narrative summary of the overall ne
 https://github.com/user-attachments/assets/28d5a71a-0e7a-4e99-af01-05d11c646aee
 
 ## Installation
-1. Follow [Backend Installment Guide](https://github.com/benson-fm/stockwise/tree/main/backend)
-2. Follow [Frontend Installment Guide](https://github.com/benson-fm/stockwise/tree/main/frontend)
-3. Run `npm run dev` and `flask run` in separate terminals
+1. Clone the Repo `git clone https://github.com/benson-fm/stockwise.git`
+2. Follow [Backend Installment Guide](https://github.com/benson-fm/stockwise/tree/main/backend)
+3. Follow [Frontend Installment Guide](https://github.com/benson-fm/stockwise/tree/main/frontend)
+4. Run `npm run dev` and `flask run` in separate terminals

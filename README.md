@@ -1,6 +1,6 @@
 # StockWise
 <div align="center">
-  <img alt="banner" src="https://github.com/benson-fm/stockwise/blob/main/frontend/logoTitle.png">
+  <img alt="banner" src="https://github.com/benson-fm/stockwise/blob/main/frontend/src/assets/logoTitle.png">
 
   ### Stock sentiment analysis powered by Google Gemini
 </div>
@@ -39,7 +39,7 @@ The Action Recommendations feature provides clear investment guidance by analyzi
 The Stock Analysis feature offers a concise, narrative summary of the overall news coverage and sentiment surrounding a stock. It analyzes the key drivers behind the stock’s current sentiment and explains why the market is responding positively, negatively, or neutrally. The feature dives deeper into the specific factors influencing the stock, such as financial performance, market trends, industry news, or external events. It also provides reasoning behind the recommended action (buy, sell, or hold), giving investors a holistic view of the stock’s situation. By providing both data and context, the Stock Analysis feature equips users with the knowledge needed to make informed investment decisions.
 
 ## Application Demo
-https://github.com/anonymous-himalayas/TrailQuest/assets/108317527/a9243c0e-d076-482e-9efd-550f32bf0976
+https://github.com/user-attachments/assets/28d5a71a-0e7a-4e99-af01-05d11c646aee
 
 ## Installation
 1. Install [Node.js](https://nodejs.org)

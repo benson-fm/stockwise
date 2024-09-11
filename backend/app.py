@@ -47,11 +47,11 @@ def get_stock_data(ticker):
         articles = get_articles(ticker, sample_size, newsapi)
 
         # Generate response (description and sentiment)
-        description, sentiment, action, positive, neutral, negative, price_per_stock = generate_response(articles, ticker, sample_size, model)
+        description, sentiment, action, positive, neutral, negative = generate_response(articles, ticker, sample_size, model)
         date = datetime.today().strftime('%Y-%m-%d')
 
         # Create the entry in FireBase
-        create_stock_analysis(ticker, description, sentiment, action, positive, neutral, negative, date, price_per_stock)
+        create_stock_analysis(ticker, description, sentiment, action, positive, neutral, negative, date)
 
         # Read Data and return to Front-End
         return read_stock_analysis(ticker)

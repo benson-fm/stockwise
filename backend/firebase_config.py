@@ -12,7 +12,7 @@ firebase_admin.initialize_app(cred)
 db = firestore.client()
 
 # 'C'
-def create_stock_analysis(ticker, description, sentiment, action, positive, neutral, negative, date, price_per_stock):
+def create_stock_analysis(ticker, description, sentiment, action, positive, neutral, negative, date):
     # Extract data from the Gemini response
     
     # Create a Firestore document reference based on stock ticker
@@ -26,13 +26,12 @@ def create_stock_analysis(ticker, description, sentiment, action, positive, neut
         'negative': negative,
         'neutral': neutral,
         'positive': positive,
-        'sentiment': sentiment,
-        'pricePerStock': price_per_stock
+        'sentiment': sentiment
     }
 
     # Set document data in Firestore
     doc_ref.set(data)
-    print(f'Stock data for {ticker} stored in Firestore. Price per stock = {price_per_stock}')
+    print(f'Stock data for {ticker} stored in Firestore')
 
 # 'R'
 def check_for_stock(ticker):
@@ -53,7 +52,6 @@ def read_stock_analysis(ticker):
     positive = data.get('positive')
     neutral = data.get('neutral')
     negative = data.get('negative')
-    price_per_stock = data.get('pricePerStock')
 
     return jsonify({
         "ticker": ticker,
@@ -63,8 +61,7 @@ def read_stock_analysis(ticker):
         "date": date, 
         "positive": positive,
         "neutral": neutral,
-        "negative": negative,
-        "pricePerStock": price_per_stock 
+        "negative": negative 
     })
 
 # 'U'

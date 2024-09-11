@@ -42,9 +42,6 @@ The Stock Analysis feature offers a concise, narrative summary of the overall ne
 https://github.com/user-attachments/assets/28d5a71a-0e7a-4e99-af01-05d11c646aee
 
 ## Installation
-1. Install [Node.js](https://nodejs.org)
-2. Clone the repository `git clone https://github.com/anonymous-himalayas/TrailQuest.git`
-3. Get an API key for [Google Gemini](https://ai.google.dev/tutorials/get_started_web#set-up-project)
-4. Enter your API key in `.env` (yes, the one in the file has expired!)
-6. Install npm packages `npm install`
-7. Start the development server `npm run dev` or create a production build `npm run build`
+1. Follow [Backend Installment Guide](https://github.com/benson-fm/stockwise/tree/main/backend)
+2. Follow [Frontend Installment Guide](https://github.com/benson-fm/stockwise/tree/main/frontend)
+3. Run `npm run dev` and `flask run` in separate terminals

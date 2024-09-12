@@ -23,6 +23,9 @@
   
 </div>
 
+## Application Demo
+https://github.com/user-attachments/assets/28d5a71a-0e7a-4e99-af01-05d11c646aee
+
 ## Overview
 In today’s fast-paced stock market, investors are bombarded with vast amounts of news articles, social media posts, and financial reports related to various stocks. The challenge arises from the overwhelming volume of information, making it difficult for investors to assess the overall sentiment around a particular stock. Without a clear understanding of the sentiment (whether positive, negative, or neutral), investors may struggle to make informed decisions, potentially leading to missed opportunities or poor investments.
 
@@ -37,9 +40,6 @@ The Action Recommendations feature provides clear investment guidance by analyzi
 
 ### Stock Analysis
 The Stock Analysis feature offers a concise, narrative summary of the overall news coverage and sentiment surrounding a stock. It analyzes the key drivers behind the stock’s current sentiment and explains why the market is responding positively, negatively, or neutrally. The feature dives deeper into the specific factors influencing the stock, such as financial performance, market trends, industry news, or external events. It also provides reasoning behind the recommended action (buy, sell, or hold), giving investors a holistic view of the stock’s situation. By providing both data and context, the Stock Analysis feature equips users with the knowledge needed to make informed investment decisions.
-
-## Application Demo
-https://github.com/user-attachments/assets/28d5a71a-0e7a-4e99-af01-05d11c646aee
 
 ## Installation
 1. Clone the Repo `git clone https://github.com/benson-fm/stockwise.git`
